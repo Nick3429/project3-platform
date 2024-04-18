@@ -1,0 +1,32 @@
+@import './_mixins';
+
+.mainContainer {
+  display: flex;
+  margin: auto ;
+  // margin: auto;
+  width: 60%;
+  @include device-size(phone) {
+    width: 100%;
+    // flex-direction: column-reverse;
+    // flex-direction: row-reverse;
+    // flex-wrap: wrap;
+  }
+  // min-height: 30px;
+}
+
+.firstColumn {
+  // display: flex;
+  margin: auto;
+  // width: 100%;
+  @include device-size(phone) {
+    // width: 100%;
+    margin: auto;
+  }
+}
+
+.secondColumn {
+  width: 35%;
+  @include device-size(phone) {
+    width: 100%;
+  }
+}

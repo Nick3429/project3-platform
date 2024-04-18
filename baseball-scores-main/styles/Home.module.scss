@@ -1,0 +1,78 @@
+@import './mixins';
+
+.container {
+  width: 100vw;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include device-size(phone) {
+    justify-content: center;
+    // min-height: 70%;
+  }
+  align-items: center;
+  margin: calc((95vh - 70px - 89px - 232px)/2) auto;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  @include device-size(miniDevice) {
+    margin: 1rem 0;
+  }
+}
+
+.main {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scores {
+  padding: 1rem;
+  background-color: $card-color;
+  border: 1px solid $hover-color;
+  border-radius: 5px;
+  color: $primary-text-color;
+  font-size: 20px;
+  text-align: center;
+  width: 30vw;
+  transition: 0.3s;
+  @include device-size(phone) {
+    width: 95vw;
+  }
+  @include device-size(miniDevice) {
+    width: 95vw;
+  }
+  margin-bottom: 1rem;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  font-weight: 400;
+  @include device-size(phone) {
+    font-size: 2rem;
+  }
+  @include device-size(miniDevice) {
+    font-size: 1.75rem;
+  }
+}
+
+.title,
+.description {
+  text-align: center;
+}
